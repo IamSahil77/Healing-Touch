@@ -17,11 +17,16 @@
     --shadow-hover: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    overflow-x: hidden;
 }
 
 .container {
@@ -275,6 +280,7 @@ section {
 
 .about-image img {
     width: 100%;
+    height: auto;
     border-radius: 15px;
     box-shadow: var(--shadow-hover);
 }
@@ -401,7 +407,7 @@ section {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 3rem;
 }
 
@@ -667,19 +673,20 @@ section {
 
     .nav-menu {
         position: fixed;
-        left: -100%;
         top: 70px;
+        left: 0;
+        right: 0;
         flex-direction: column;
         background: var(--white);
-        width: 100%;
         text-align: center;
         transition: 0.3s;
         box-shadow: var(--shadow);
         padding: 2rem 0;
+        transform: translateX(100%);
     }
 
     .nav-menu.active {
-        left: 0;
+        transform: translateX(0);
     }
 
     .hero {
