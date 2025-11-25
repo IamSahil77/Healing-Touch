@@ -553,6 +553,8 @@ section {
 .contact-item p {
     color: var(--text-light);
     line-height: 1.8;
+    word-break: break-word;
+    overflow-wrap: anywhere;
 }
 
 .contact-form-wrapper {
@@ -722,6 +724,21 @@ section {
 
     .contact-form-wrapper {
         padding: 2rem;
+    }
+
+    .contact-content {
+        gap: 2rem;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    .contact-item {
+        gap: 1rem;
     }
 }
 
